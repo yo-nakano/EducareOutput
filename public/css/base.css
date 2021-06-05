@@ -1,0 +1,651 @@
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #EEEEEE;
+  position: relative;
+  overflow-y: scroll;
+}
+
+li {
+  list-style: none;
+}
+
+/* ヘッダー（header.php） */
+#header {
+  width: 100vw;
+  position: relative;
+  background-color: #000000cc;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  z-index: 2;
+}
+
+#logo {
+  color: white;
+  text-decoration: none;
+  font-family: Courier;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: auto 0;
+}
+
+.list, .logo {
+  padding: 0 50px;
+}
+
+.list li{
+  float: left;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.list a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+#output_index {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+#question_index {
+  border-right: 1px solid white;
+}
+
+#sign-in p {
+  text-align: end;
+  margin-bottom: 0;
+}
+
+#sign-in a {
+  color: white;
+  text-decoration: white;
+}
+
+#concept {
+  position: absolute;
+  top: 150px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: bold;
+  margin-left: 80px;
+}
+
+/* ログイン画面（login.php） */
+#login-box {
+  width: 40%;
+  margin: 20px auto 0;
+  border: 1px solid #ccc;
+  /* border-radius: 10px; */
+  background-color: white;
+  padding: 25px 0;
+}
+
+/* #login-box h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ccc;
+  font-weight: normal;
+} */
+
+#login-box input {
+  width: calc(100% - 60px);
+  height: 50px;
+  box-sizing: border-box;
+  margin: 10px 30px;
+  border: 1px solid #ccc;
+}
+
+#login_submit-button {
+  background-color: #d70466;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#move_to_signup {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#move_to_signup a {
+  color: blue;
+}
+
+.failed-msg {
+  color: red;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 200px;
+}
+
+/* 新規登録画面（signup.php） */
+#signup-box {
+  width: 40%;
+  margin: 200px auto 0;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 25px 0;
+}
+
+#signup-box input {
+  width: calc(100% - 60px);
+  height: 50px;
+  box-sizing: border-box;
+  margin: 10px 30px;
+  border: 1px solid #ccc;
+}
+
+#signup_submit-button {
+  background-color: #d70466;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#move_to_login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#move_to_login a {
+  color: blue;
+}
+
+.user-error-msgs {
+  color: red;
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+
+/* 一覧画面（Outputs(Questions)/index.php） */
+.contents-head {
+  background-color: white;
+  margin: 50px auto 0;
+  width: 60%;
+  box-shadow: 0 0 3px #BBBBBB;
+}
+
+.contents-head h2 {
+  padding: 20px 30px;
+  margin-bottom: 12px;
+}
+
+.contents-head h2 span {
+  color: #5F9EA0;
+}
+
+.contents-body {
+  background-color: white;
+  margin: 0 auto 50px;
+  padding: 10px 0;
+  max-width: 60%;
+  /* height: 65vh;
+  overflow-y: scroll; */
+  box-shadow: 0 0 3px #BBBBBB;
+}
+
+#created-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  border-bottom: 1px solid #EEEEEE;
+  width: calc(100% - 60px);
+}
+
+#created-list input {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+  color: #666666;
+  font-weight: bolder;
+}
+
+#created-list span {
+  font-size: 12px;
+}
+
+#title {
+  width: 80%;
+  overflow-x: scroll;
+}
+
+#title input {
+  font-size: 18px;
+}
+
+#new-button  {
+  position: fixed; 
+  bottom: 30px;
+  right: 15%;
+  display: block;
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+  color: white;
+  background-color: #666666;
+  text-decoration: none;
+  border-radius: 100px;
+  font-weight: bolder;
+}
+
+#new-button:hover #new-sign {
+  display: inline;
+}
+
+#new-sign {
+  position: absolute;
+  display: none;
+  color: #666666;
+  width:80px;
+  left: 30px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* 新規投稿画面（Outputs(Questions)/new.php） */
+.box1 {
+  background-color: white;
+  width: 60%;
+  margin: 100px auto;
+  padding: 20px;
+  box-shadow: 0 0 3px #BBBBBB;
+}
+
+.box1 h3 {
+  font-size: 20px;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+
+.box1 form {
+  margin: 10px 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.box1 input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  font-size: 15px;
+}
+
+.box1 textarea {
+  height: 33vh;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  margin-bottom: 10px;
+  color: red;
+}
+
+#confirm_submit {
+  margin-top: 20px;
+  background-color: #d70466;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.return {
+  text-align: center;
+}
+
+.return a {
+  color: blue;
+}
+
+/* 投稿確認画面（create.php） */
+.box2 {
+  background-color: white;
+  width: 60%;
+  margin: 100px auto;
+  padding: 20px;
+  box-shadow: 0 0 3px #BBBBBB;
+}
+
+.box2 h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.box2 h3 {
+  margin-bottom: 0;
+}
+
+.box2 form {
+  margin: 30px;
+}
+
+.confirm-info {
+  margin-bottom: 50px;
+}
+
+.confirm-info h3 {
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.post-info {
+  font-size: 18px;
+  margin: 5px 0 0 10px;
+  color: #333333;
+  white-space: pre-wrap;
+}
+
+#action-button {
+  display: flex; 
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#exec_submit {
+  width: calc(50% - 10px);
+  height: 50px;
+  background-color: #d70466;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#return_submit {
+  width: calc(50% - 10px);
+  height: 50px;
+  background-color: white;
+  color: #006666;
+  border: 2px solid #006666;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+
+/* 詳細画面（Outputs(Questions)/view.php） */
+.view_contents {
+  background-color: white;
+  margin: 50px auto;
+  padding-bottom: 30px;
+  width: 60%;
+  position: relative;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 0 3px #BBBBBB;
+}
+
+#view_user_name {
+  background-color: white;
+  color: #777;
+  border: none;
+  margin: 30px 50px 20px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bolder;
+  text-align: left;
+  outline: none;
+}
+
+#output_view_title h2, #question_view_title h2 {
+  margin: 0 50px 30px;
+  padding-bottom: 10px;
+  font-size: xx-large;
+}
+
+#output_view_title h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+#view_text {
+  text-align: left;
+  margin: 0 50px;
+  padding-bottom: 50px;
+  white-space: pre-wrap;
+}
+
+.view_contents h4 {
+  width: calc(100% - 100px);
+  padding: 10px ;
+  margin: 0 auto 20px;
+  background-color: #eeeeee;
+  border-left: 3px solid #555555;
+  /* box-shadow: 2px 2px 2px #eeeeee; */
+}
+
+.edit_delete {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.edit_delete input {
+  color: blue;
+  text-decoration: underline;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.view_contents h3 {
+  text-align: center;
+  padding: 30px 0;
+  margin: 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.comments {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.comment-edit_delete {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+}
+
+.comment-edit_delete input {
+  color: blue;
+  text-decoration: underline;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.comment{
+  margin: 0 50px 32px;
+  white-space: pre-line;
+}
+
+.comment_create {
+  display: block;
+  background-color: #eeeeee;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin: 30px auto 0;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* マイページ・ユーザーページ（Users/view.php） */
+.user_view_contents {
+  background-color: white;
+  margin: 50px auto;
+  padding: 30px 0;
+  width: 60%;
+  position: relative;
+  border: 1px dotted #5F9EA0;
+  box-shadow: 0 0 1px #5F9EA0;
+}
+
+.user_view_contents h3 {
+  /* width: calc(100% - 60px); */
+  margin: 0 30px 30px;
+  padding: 5px 10px;
+  border-left: 4px solid #5F9EA0;
+  /* border-bottom: 1px solid #5F9EA0; */
+}
+
+.user_info {
+  width: calc(100% - 100px);
+  margin-left: 50px;
+}
+
+.user_info h4 {
+  color: #5F9EA0;
+  width: 100%;
+}
+
+.user_info span {
+  color: black;
+}
+
+
+/* 管理画面 */
+
+.mg_body {
+  background-color: white;
+}
+
+.mg_index {
+  width: 70%;
+  margin: 100px auto;
+}
+
+.mg_index h2 {
+  text-align: center;
+}
+
+.mg_index h3 {
+  text-align: center;
+}
+
+.mg_select {
+  margin-top: 50px;
+}
+
+.mg_select a {
+  color: #666666;
+}
+
+
+
+table {
+  width: 100%;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-collapse: collapse;
+  /* table-layout: fixed; */
+}
+
+th {
+  padding: 15px 30px;
+  text-align: left;
+  border-bottom: 1px solid #cccccc;
+}
+
+tr {
+  height: 25px;
+}
+
+td {
+  padding: 10px 30px;
+  height: 100%;
+}
+
+.mg_index_title {
+  width: 60%;
+}
+
+.mg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mg_button, .mg_delete_button {
+  background-color: transparent;
+  color: blue;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+
+/* お気に入りボタン */
+.favorite {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.btn-favorite{
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-favorite:hover{
+  color: #FFD700;
+}
+
+.active{
+  margin: auto;
+  color: #FFD700;
+}
+
+.btn-favorite .active{
+  margin: auto;
+  color: #FFD700;
+}
+
+.btn-favorite:hover .favorite-sign {
+  display: block;
+}
+
+.favorite-sign {
+  /* position: absolute;
+  top: 20px;
+  right: 1px; */
+  margin-top: 5px;
+  display: none;
+  font-size: 10px;
+}

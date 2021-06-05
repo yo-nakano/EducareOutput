@@ -1,0 +1,9 @@
+<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<phpunit>
+    <php>
+        <var name="DB_DSN" value="mysql:host=localhost;dbname=educare_output_test;charset=utf8" />
+        <var name="DB_USER" value="root" />
+        <var name="DB_PASSWD" value="root" />
+        <var name="DB_DBNAME" value="educare_output_test" />
+    </php>
+</phpunit> -->
