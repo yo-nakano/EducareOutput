@@ -15,4 +15,5 @@ educareを受講しているカリキュラム生専用の学習サイトです�
 # データベース設計
 設計書よりテーブル定義書、ER図を参照。
 # 動作デモ
-デモ動画.mp4を参照。
+操作しながら主要機能を解説したこちらの動画を参照。<br>
+https://drive.google.com/file/d/1AwYbI5FNaGXDmnONlIVacwUza-vTFRbj/view?usp=sharing
