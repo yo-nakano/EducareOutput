@@ -1,2 +1,2 @@
 # EducareOutput
- 
+##PHP自作
