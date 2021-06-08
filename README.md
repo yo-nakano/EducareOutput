@@ -16,4 +16,6 @@ educareを受講しているカリキュラム生専用の学習サイトです�
 設計書よりテーブル定義書、ER図を参照。
 # 動作デモ
 操作しながら主要機能を解説したこちらの動画を参照。<br>
-https://drive.google.com/file/d/1AwYbI5FNaGXDmnONlIVacwUza-vTFRbj/view?usp=sharing
+https://drive.google.com/file/d/1AwYbI5FNaGXDmnONlIVacwUza-vTFRbj/view?usp=sharing<br>
+
+本番環境にデプロイでき次第、サイトの実物を共有します。
